@@ -37,17 +37,20 @@ function App() {
   const handleSubmitAnswer = async (answer: string) => {
     setIsSubmitting(true);
 
-    const response = await fetch("http://localhost:8000/api/grade", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        question: question,
-        answer: answer,
-        mode: mode,
-      }),
-    });
+    const response = await fetch(
+      "https://airoastback-production.up.railway.app:8000/api/grade",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          question: question,
+          answer: answer,
+          mode: mode,
+        }),
+      }
+    );
 
     let data;
 
