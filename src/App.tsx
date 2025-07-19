@@ -76,18 +76,20 @@ function App() {
 
   const containerStyle = {
     display: "flex",
-    height: "calc(100vh - 45px)",
+    height: "calc(100vh - 47px)",
     width: "100%",
     backgroundColor: "#121212",
     color: "#d4d4d4",
   };
 
   const leftPanelStyle = {
-    flex: 1,
     display: "flex",
     flexDirection: "column",
-    borderRight: "1px solid #333",
+    flex: 1,
+    minHeight: "0", // Important for proper flex shrinking
+    overflow: "hidden", // Prevent content from spilling
     backgroundColor: "#1e1e1e",
+    borderRight: "1px solid #333",
   };
 
   const panelStyle = {
