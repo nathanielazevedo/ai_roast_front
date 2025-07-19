@@ -38,7 +38,7 @@ function App() {
     setIsSubmitting(true);
 
     const response = await fetch(
-      "https://airoastback-production.up.railway.app:8000/api/grade",
+      "https://airoastback-production.up.railway.app/api/grade",
       {
         method: "POST",
         headers: {
