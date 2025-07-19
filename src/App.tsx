@@ -2,6 +2,7 @@ import { useState } from "react";
 import AnswerInput from "./components/AnswerInput";
 import AIResponse from "./components/AIResponse";
 import NavBar from "./components/NavBar";
+import { Analytics } from "@vercel/analytics/react";
 
 const questions = [
   "Implement a function to reverse a string.",
@@ -107,6 +108,7 @@ function App() {
 
   return (
     <div className="app">
+      <Analytics />
       <NavBar />
       <div style={containerStyle}>
         {/* @ts-expect-error aaa */}
